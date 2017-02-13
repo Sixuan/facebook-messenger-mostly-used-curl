@@ -20,3 +20,12 @@ curl -X POST -H "Content-Type: application/json" -d '{
  ]
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token={access_token}"    
 ```
+2. To add greeting
+```
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"greeting",
+  "greeting":{
+    "text":"Hey {{user_first_name}}, myNews at your service! I can dig up the news of your interests. Type 'GO' to get started!"
+  }
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token={access_token}"
+```
